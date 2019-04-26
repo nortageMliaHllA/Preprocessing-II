@@ -1,1 +1,26 @@
 // Mixins in here
+
+// .custom-layout(center, center);
+
+.custom-layout(center, center) {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-btn(@width: 200px, @bgColor: rgb(9, 122, 122), @fontColor: white, @bdRadius: 1.5rem) {
+        display: block;
+         background-color: @bgColor;
+         cursor: pointer;
+         padding: 1.5rem;
+         width: @width;
+         height: 50px;
+         font-size: 2rem;
+         border-radius: 1.5rem;
+         color: @fontColor;
+         text-align: center;
+}
+
+.content-pick .destination .btn {
+    .custom-btn();
+}
